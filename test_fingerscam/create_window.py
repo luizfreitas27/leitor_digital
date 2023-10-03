@@ -22,17 +22,15 @@ class Aplication():
     def frames(self):
 
         ### Tela de imagem da pessoa
-        self.frame_1 = Frame(self.root, bg="white")
-        self.frame_1.place(relx= 0.65 ,rely= 0.05, width=250, height=300)
+        self.frame_foto = Frame(self.root, bg="white")
+        self.frame_foto.place(relx= 0.44 ,rely= 0.3, width=250, height=300)
+
+        self.frame_logo = Frame(self.root, bg="#c0c0c0")
+        self.frame_logo.place(relx= 0.41,rely= 0.01, width= 350, height= 250)
         
 
-        ### Tela de imagem da digital
-        self.frame_2 = Frame(self.root, bg="white")
-        self.frame_2.place(relx= 0.65 ,rely= 0.5, width=250, height=300)
-
-    def botao(self):
-        self.button = Button(self.frame_2, text="balblabla",command=self.root.destroy)
-        self.button.place(relx=0.2, rely=0.1, relwidth=0.1, relheight=0.15)
+    def botoes(self):
+        botao_1 = Button(self.root, text='blablabla')
     
         
 
