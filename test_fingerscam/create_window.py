@@ -1,9 +1,5 @@
 from tkinter import *
-
-
-import os
-
-fotoApp = os.path.dirname(__file__)
+from tkinter.font import Font
 
 
 class Aplication():
@@ -11,13 +7,14 @@ class Aplication():
         self.root = Tk()
         self.config_tela()
         self.frames()
+        self.input()
         self.imagem_logo()
 
 
         self.root.mainloop()
         
     def config_tela(self):
-        self.root.geometry("900x700")
+        self.root.geometry("1920x1080")
         self.root.title('Aplication')
         self.root.configure(background="black")
         self.root.minsize(width=500, height=500)
@@ -28,18 +25,24 @@ class Aplication():
         self.frame_foto = Frame(self.root, bg="white")
         self.frame_foto.place(relx= 0.44 ,rely= 0.3, width=250, height=300)
 
-        self.frame_logo = Frame(self.root, bg="#c0c0c0")
-        self.frame_logo.place(relx= 0.41,rely= 0.01, width= 500, height= 500)
-        
+        self.frame_input = Frame(self.root, bg="black")
+        self.frame_input.place(relx= 0.44 ,rely= 0.65, width=250, height=25)
+           
 
     def imagem_logo(self):
-        self.my_image = PhotoImage(file="/home/projexln01/Desktop/leitor_digital/assets/images/Logo_projex_Branca.png")
-        self.imagemFinal = Label(self.frame_logo, image=self.my_image)
-        self.imagemFinal.place(relx=0.01, rely=0.01, width=1000, height=1000)
+        self.my_image = PhotoImage(file="/home/projexln01/Desktop/leitor_digital/assets/images/Logo_Projex_71x66.5.png")
+        self.imagemFinal = Label(self.root, image=self.my_image, bg="black")
+        self.imagemFinal.place(relx=0.45, rely=0.00, width=200, height=200)
 
-    # def inputs(self):
-    #     self.input_1 = 
+    
+    def input(self):
+        self.label_nome = Label(self.frame_input,text="Nome    ", bg="black", fg="white")
+        self.label_nome.grid(column=1, row=0)
+        self.input_nome = Entry(self.frame_input)
+        self.input_nome.grid(column=2, row=0)
+
+
+    
+
         
     
-    
-        
