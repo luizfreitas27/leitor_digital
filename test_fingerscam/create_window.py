@@ -1,5 +1,7 @@
 from tkinter import *
 from tkinter.font import Font
+from .fonts import *
+
 
 
 class Aplication():
@@ -31,7 +33,7 @@ class Aplication():
         
         ### Caixa de input nome
         self.frame_input = Frame(self.root, bg="black")
-        self.frame_input.place(relx= 0.44 ,rely= 0.65, width=250, height=25)
+        self.frame_input.place(relx= 0.44 ,rely= 0.65, width=400, height=200)
            
 
     def imagem_logo(self):
@@ -45,10 +47,14 @@ class Aplication():
     def input(self):
 
         ### Input nome funcionario
-        self.label_nome = Label(self.frame_input,text="Nome    ", bg="black", fg="white")
+        self.label_nome = Label(self.frame_input,text="Nome    ",font=fonte(), bg="black", fg="white")
         self.label_nome.grid(column=1, row=0)
-        self.input_nome = Entry(self.frame_input)
+        self.input_nome = Entry(self.frame_input, border=0)
         self.input_nome.grid(column=2, row=0)
+        self.botao_nome = Button(self.frame_input, text="Validar", command=self.root.destroy, background="white", font=fonte2())
+        self.botao_nome.place(relx=0.20, rely=0.5, width=100, height=40)
+
+        
 
 
     
