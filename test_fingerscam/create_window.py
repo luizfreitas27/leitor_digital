@@ -1,7 +1,6 @@
 from tkinter import *
-from tkinter.font import Font
 from .fonts import *
-
+import time
 
 
 class Aplication():
@@ -17,13 +16,19 @@ class Aplication():
 
         self.root.mainloop()
         
+        
+
+        
+        
     def config_tela(self):
 
         ### Configs basicas da tela
         self.root.geometry("1920x1080")
         self.root.title('Aplication')
         self.root.configure(background="black")
-        self.root.minsize(width=500, height=500)
+        self.root.maxsize(width=1920, height=1080)
+        self.root.minsize(width=900, height=700)
+        
 
     def frames(self):
 
@@ -47,16 +52,16 @@ class Aplication():
     def input(self):
 
         ### Input nome funcionario
-        self.label_nome = Label(self.frame_input,text="Nome    ",font=fonte(), bg="black", fg="white")
+        self.label_nome = Label(self.frame_input,text="User    ",font=fonte(), bg="black", fg="white")
         self.label_nome.grid(column=1, row=0)
         self.input_nome = Entry(self.frame_input, border=0)
         self.input_nome.grid(column=2, row=0)
-        self.botao_nome = Button(self.frame_input, text="Validar", command=self.root.destroy, background="white", font=fonte2())
+        self.botao_nome = Button(self.frame_input, text="Validar", command=self.root.destroy, bg="white", font=fonte2(), bd=0)
         self.botao_nome.place(relx=0.20, rely=0.5, width=100, height=40)
 
         
-
-
+    
+            
     
 
         

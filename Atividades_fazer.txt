@@ -1,0 +1,5 @@
+- Ajeitar template da caixa de por nomes
+- Trocar nome por ID( aleatorio ) ???
+- Tentar puxar imagens e migrar com um banco de dados local.
+
+

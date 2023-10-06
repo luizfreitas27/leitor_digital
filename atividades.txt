@@ -1,0 +1,6 @@
+Dia 06.10
+
+- Testes temporizador com insercao de codigo
+- Teste comportamento responsivo
+- Ajustes visuais
+
