@@ -1,9 +1,10 @@
 from tkinter import *
 from .fonts import *
 import time
+from .functions import Funcs
 
 
-class Aplication():
+class Aplication(Funcs):
 
     ### Initialization
     def __init__(self):
@@ -15,11 +16,7 @@ class Aplication():
 
 
         self.root.mainloop()
-        
-        
-
-        
-        
+                
     def config_tela(self):
 
         ### Configs basicas da tela
@@ -29,7 +26,6 @@ class Aplication():
         self.root.maxsize(width=1920, height=1080)
         self.root.minsize(width=900, height=700)
         
-
     def frames(self):
 
         ### Tela de imagem da pessoa
@@ -40,7 +36,6 @@ class Aplication():
         self.frame_input = Frame(self.root, bg="black")
         self.frame_input.place(relx= 0.44 ,rely= 0.65, width=400, height=200)
            
-
     def imagem_logo(self):
 
         ### Logo empresa
@@ -48,7 +43,6 @@ class Aplication():
         self.imagemFinal = Label(self.root, image=self.my_image, bg="black")
         self.imagemFinal.place(relx=0.45, rely=0.00, width=200, height=200)
 
-    
     def input(self):
 
         ### Input nome funcionario
@@ -56,11 +50,11 @@ class Aplication():
         self.label_nome.grid(column=1, row=0)
         self.input_nome = Entry(self.frame_input, border=0)
         self.input_nome.grid(column=2, row=0)
-        self.botao_nome = Button(self.frame_input, text="Validar", command=self.root.destroy, bg="white", font=fonte2(), bd=0)
+        self.botao_nome = Button(self.frame_input, text="Validar", command=self.limpa_tudo, bg="white", font=fonte2(), bd=0)
         self.botao_nome.place(relx=0.20, rely=0.5, width=100, height=40)
 
         
-    
+
             
     
 

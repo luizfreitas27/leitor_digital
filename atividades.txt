@@ -1,6 +1,5 @@
 Dia 06.10
 
-- Testes temporizador com insercao de codigo
-- Teste comportamento responsivo
-- Ajustes visuais
+- Criado db simples
+- Pesquisa sobre db
 
